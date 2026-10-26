@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eis-data-processing"
+version = "0.1.0"
+description = "Python tools for Solartron SMaRT impedance data processing and analysis."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Matthew Wilson" }]
+keywords = ["EIS", "impedance", "Solartron", "SMaRT", "YSZ", "conductivity"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+interactive = ["ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["eis_processing*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

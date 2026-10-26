@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Packaging outputs
+/build/
+/dist/
+*.egg-info/
+.eggs/
+
+# Test and analysis caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Machine-specific paths, settings, and credentials
+.env
+.env.*
+!.env.example
+/config/paths.local.toml
+/config/*.local.toml
+
+# Optional local outputs and working data
+# The intended single_crystal_data_F26 folder is a sibling of this repo.
+/data/
+/single_crystal_data_F26/
+/outputs/
+/figures/
+/logs/
+*.log
+
+# OS and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+# Keep tests/fixtures CSV and DAT files eligible for version control.
+# Do not add blanket *.csv, *.txt, or *.dat ignores.
